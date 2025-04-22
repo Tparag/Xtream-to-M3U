@@ -52,7 +52,7 @@ Works great on **PC (XAMPP)** and **Android (KSWEB)**. No database needed - just
 3. 📁 Copy the project folder to:  
    `storage/htdocs/`
 4. 🌍 In your mobile browser, go to:  
-   `http://localhost/your-folder-name`
+   `http://localhost:8000/xtream-to-m3u`
 5. 🚀 Log in and generate your playlist with category filters.
 ---
 
