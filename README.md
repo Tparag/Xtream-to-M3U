@@ -1,7 +1,7 @@
 # 🚀 Xtream Codes to M3U
 
-Easily convert your Xtream Codes link into a clean, category-filtered M3U playlist — and stream it **buffer-free** like a pro!  
-Works great on **PC (XAMPP)** and **Android (KSWEB)**. No database needed — just **Apache**!
+Easily convert your Xtream Codes link into a clean, category-filtered M3U playlist - and stream it **buffer-free** like a pro!  
+Works great on **PC (XAMPP)** and **Android (KSWEB)**. No database needed - just **Apache**!
 
 ---
 
