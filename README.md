@@ -45,17 +45,6 @@ Works great on **PC (XAMPP)** and **Android (KSWEB)**. No database needed - just
 5. 🔓 Log in and generate your playlist with category filters.
 ---
 
-## 📱 How to Use on Android (KSWEB)
-
-1. 📲 Install [KSWEB](https://play.google.com/store/apps/details?id=ru.kslabs.ksweb) from the Play Store.
-2. 🔥 Start **Apache** from inside KSWEB.
-3. 📁 Copy the project folder to:  
-   `storage/htdocs/`
-4. 🌍 In your mobile browser, go to:  
-   `http://localhost:8000/xtream-to-m3u`
-5. 🚀 Log in and generate your playlist with category filters.
----
-
 ## 🎬 How to Use Playlist in IPTV Players
 
 Once you generate the M3U playlist, copy the link or file path and use it in your favorite player:
