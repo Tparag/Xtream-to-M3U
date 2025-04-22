@@ -122,7 +122,6 @@ header("Pragma: no-cache");
 
 header('Content-Type: audio/x-mpegurl');
 header('Content-Disposition: inline; filename="playlist.m3u"');
-
 echo $m3uContent;
 exit();
 ?>
