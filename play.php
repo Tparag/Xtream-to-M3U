@@ -94,7 +94,7 @@ if ($port = parse_url($final_url, PHP_URL_PORT)) {
 }
 
 $processedResponse = implode("\n", array_map(function ($line) use ($baseUrl) {
-    if (preg_match('#\.ts$#', $line) && !filter_var($line, FILTER_VALIDATE_URL)) {
+    if (preg_match('#\.ts($|\?)#', $line) && !filter_var($line, FILTER_VALIDATE_URL)) {
         return $baseUrl . '/' . ltrim($line, '/');
     }
     return $line;
