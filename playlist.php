@@ -88,7 +88,7 @@ if ($m3uContent === false) {
         $streamId = $stream['stream_id'] ?? '';
         $streamName = $stream['name'] ?? 'Unknown Stream';
         $categoryId = $stream['category_id'] ?? '';
-        $streamIcon = $stream['stream_icon'] ?? '';
+        $streamIcon = !empty($stream['stream_icon']) ? $stream['stream_icon'] : 'https://i.ibb.co/xK5zSMkD/xtream.png';
         if (empty($streamId)) {
             continue;
         }
