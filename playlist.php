@@ -45,6 +45,8 @@ if (!is_dir($playlistDir) && !mkdir($playlistDir, 0755, true)) {
     die("Error: Unable to create directory $playlistDir.");
 }
 
+$replaceUrl = "$baseUrl/$user/$password/";
+
 $m3uContent = @file_get_contents($m3uFilePath);
 if ($m3uContent === false) {
     $apiUrl = "$baseUrl/player_api.php?username=$user&password=$password&action=get_live_streams";
@@ -93,15 +95,14 @@ if ($m3uContent === false) {
             continue;
         }
 
-        $streamUrl = "$baseUrl/$user/$password/$streamId";
-        $newStreamUrl = $m3u8Url . $streamId;
+        $streamUrl = "$baseUrl/$user/$password/$streamId";        
 
         $categoryName = $categoryMap[$categoryId] ?? 'Unknown';
 
-        $m3uContent .= "#EXTINF:-1 tvg-id=\"$streamId\" tvg-name=\"$streamName\" tvg-logo=\"$streamIcon\" group-title=\"$categoryName\",$streamName\n$newStreamUrl\n";
+        $m3uContent .= "#EXTINF:-1 tvg-id=\"$streamId\" tvg-name=\"$streamName\" tvg-logo=\"$streamIcon\" group-title=\"$categoryName\",$streamName\n$streamUrl\n";
         $streamCount++;
     }
-
+       
     if ($streamCount === 0) {
         http_response_code(500);
         die("Error: No valid streams found in API response.");
@@ -111,11 +112,11 @@ if ($m3uContent === false) {
         http_response_code(500);
         die("Error: Unable to save M3U file at $m3uFilePath.");
     }
-} else {
-    $oldUrl = "$baseUrl/$user/$password/";
-    $m3uContent = str_replace($oldUrl, $m3u8Url, $m3uContent);
+    
+    $m3uContent = str_replace($replaceUrl, $m3u8Url, $m3uContent);
+} else {    
+    $m3uContent = str_replace($replaceUrl, $m3u8Url, $m3uContent);
 }
-
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
