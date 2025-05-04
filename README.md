@@ -7,8 +7,8 @@ Works great on **PC (XAMPP)** and **Android (KSWEB)**.
 
 ## 🔐 Login Credentials
 
-👤 **Username**: `parag`  
-🔑 **Password**: `parag@123`
+👤 **Username**: `xtream`  
+🔑 **Password**: `xtream@123`
 
 ---
 
